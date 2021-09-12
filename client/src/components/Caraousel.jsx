@@ -1,5 +1,10 @@
 import React from "react";
 
+import Slide1 from "../static/img/Dashboard/slide-1.jpg";
+import Slide2 from "../static/img/Dashboard/slide-2.jpg"
+import Slide3 from "../static/img/Dashboard/slide-3.jpg"
+import "../static/css/index.css";
+
 function Carousel(){
     return(
         <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
@@ -10,27 +15,27 @@ function Carousel(){
             </div>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src="../slide-1.jpg" className="d-block w-100" alt="..." />
+                    <img src={Slide1} className="d-block w-100" alt="..." />
                     <div className="carousel-content">
                         <h2>First slide label</h2>
-                        <p>Some representative placeholder content for the first slide.</p>
-                        <button className="btn btn-light">Order</button>
+                        <p className="carousel-p">Some representative placeholder content for the first slide.</p>
+                        <button className="btn btn-light custom-btn">Order</button>
                     </div>
                 </div>
                 <div className="carousel-item">
-                    <img src="../slide-2.jpg" className="d-block w-100" alt="..." />
+                    <img src={Slide2} className="d-block w-100" alt="..." />
                     <div className="carousel-content">
                         <h2>Second slide label</h2>
-                        <p>Some representative placeholder content for the first slide.</p>
-                        <button className="btn btn-light">Order</button>
+                        <p className="carousel-p">Some representative placeholder content for the first slide.</p>
+                        <button className="btn btn-light custom-btn">Order</button>
                     </div>
                 </div>
                 <div className="carousel-item">
-                    <img src="../slide-3.jpg" className="d-block w-100" alt="..." />
+                    <img src={Slide3} className="d-block w-100" alt="..." />
                     <div className="carousel-content">
                         <h2>Third slide label</h2>
-                        <p>Some representative placeholder content for the first slide.</p>
-                        <button className="btn btn-light">Order</button>
+                        <p className="carousel-p">Some representative placeholder content for the first slide.</p>
+                        <button className="btn btn-light custom-btn">Order</button>
                     </div>
                 </div>
             </div>

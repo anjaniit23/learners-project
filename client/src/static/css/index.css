@@ -1,6 +1,6 @@
 .nav-link{
-  font-size: 130%;
-  margin-left: 2vw;
+  font-size: 130% !important;
+  margin-left: 2vw !important;
 }
 .navbar{
   background-color: rgb(179, 172, 170);
@@ -39,20 +39,31 @@
   font-size: 3vw;
 }
 
-.btn-light{
-  background-color: rgb(68, 70, 73);
-  font-size: 1.5vw;
-  padding: 0.4vw 2vw;
-  color: white;
-  border: rgb(54, 54, 54) 2px solid;
-  box-shadow: 2px 2px 10px grey;
-
+.custom-btn{
+  background-color: rgb(68, 70, 73) !important;
+  font-size: 1.5vw !important;
+  padding: 0.4vw 2vw !important;
+  color: white !important;
+  border: rgb(54, 54, 54) 2px solid !important;
+  box-shadow: 2px 2px 10px grey !important;
 }
 
-.btn-light:hover{
-  background-color: rgb(168, 167, 167);
-  box-shadow: 5px 5px 10px rgb(77, 77, 77);
-  border: rgb(109, 108, 108) 2px solid;
+.custom-btn:hover{
+  background-color: rgb(168, 167, 167) !important;
+  box-shadow: 5px 5px 10px rgb(77, 77, 77) !important;
+  border: rgb(109, 108, 108) 2px solid !important;
+}
+
+.carousel-p{
+  color: white ; 
+  font-family: 'Dancing Script', cursive;
+  font-size: 2vw;
+}
+
+.p{
+  color: black ; 
+  font-family: 'Dancing Script', cursive;
+  font-size: 2vw;
 }
 
 .heading{
@@ -65,6 +76,7 @@
 }
 
 .content{
+  color: white;
   display: inline-block;
   border-radius: 8px;
   width: 50vw;
@@ -78,6 +90,8 @@
   font-size: 2vw;
   transition: all 1s;
 }
+
+
 
 
 
