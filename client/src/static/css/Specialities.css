@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.title {
+    text-align: center;
+}
+
+.underline {
+    width: 14rem;
+    height: 0.20rem;
+    background: #c59d5f;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hea {
+    border-bottom: 0.5px dotted hsl(210, 22%, 49%);
+    padding: 2%;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -2%;
+}
+
+.he {
+    justify-content: space-between;
+    display: flex;
+    padding: 2%;
+    padding-right: 10px;
+}
+
+.price {
+    color: orange;
+    padding-top: 2.5%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 1%;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 10px -3px #000;
+}
+
+.card {
+    flex: 1 1 21em;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: normal;
+    width: 500px;
+}
+
+.card body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3%;
+}
+
+.card img {
+    width: 12em;
+    height: 10em;
+    border-right: 0.15rem solid rgb(230, 107, 107);
+    border-radius: 0.25rem;
+    object-fit: cover;
+    padding-left: 14px;
+}
+
+.card-text {
+    padding: 2%;
+    letter-spacing: 0.1rem;
+    line-height: 1.25;
+}
+
+@media screen and (max-width:400px) {
+    .card img {
+        width: 22em;
+        height: 14em;
+    }
+    .card {
+        width: 360px;
+    }
+}
