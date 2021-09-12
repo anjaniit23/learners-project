@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 //import components
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/Dashboard.jsx";
 import Categories from "./components/Categories";
 import Footer from "./components/Footer"
 import Review from "./components/Review"
