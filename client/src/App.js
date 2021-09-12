@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import Categories from "./components/Categories";
 import Footer from "./components/Footer"
+import Review from "./components/Review"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/" exact component={Dashboard} />
       <Route path="/categories" component={Categories} />
       <Route path="/footer" component={Footer} />
+      <Route path="/review" component={Review} />
     </Router>
   );
 }
