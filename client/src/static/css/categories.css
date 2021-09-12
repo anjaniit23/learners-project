@@ -1,0 +1,132 @@
+    p{
+      color: gray;
+      font-family: Georgia;
+    }
+    html{
+      background-color:RGB(241, 245, 248);
+    }
+
+    ul{
+      list-style: none;
+      text-align: left;
+    
+    }
+    .menu{
+      color: rgb(0, 0, 0);
+    }
+  
+    .menulist{
+    
+      line-height:1;
+      padding: 0% 0%;
+      display: flex;
+      margin: 0 auto;
+      padding-bottom: 2%;
+      justify-content: center;
+     
+    }
+    li{
+      width: 80px;
+      float: left;
+      height: 40px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: gray;
+     
+    }
+ 
+
+    li:hover{
+
+      cursor: pointer;
+      transition: 0.4s ease-in;
+      background-color: rgb(139, 115, 79);
+      color: white;
+    
+    
+    }
+
+  
+    .cont{
+      
+        width: 90%;
+        height: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2.5% 0%;
+        /* background-image: linear-gradient(rgb(245, 233, 233),white); */
+        background-color:RGB(241, 245, 248);
+ 
+    }
+
+    .cont:hover{
+      transform: scale(1.05);
+      transition: 0.5s ease-in-out;
+      box-shadow: 0.001px 0.001px 30px gray;
+    
+    }
+    .price{
+      color: rgb(168, 142, 8);
+      font-size: 1.3rem;
+    }
+    .cards{
+       
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2.7%;
+    
+    }
+    .nameAndPrice{
+        padding-right: 2%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: -3%;
+    }
+    .veg_nonveg{
+       display: flex;
+       justify-content: space-between;
+    }
+    .dishImage{
+      border: 3px solid rgba(128, 128, 128, 0.199);
+      border-style:outset;
+      width:80%; height:100%;
+
+    }
+    .styleInfo{
+      padding:  " 4% 4% 4% 0";
+    }
+    
+    @media screen and (max-width:1090px) {
+    
+    .cont{
+      height: 500px;
+    }
+    li{
+      text-align: left;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+    .first{
+      margin-left: 17px;
+    }  
+    .cards{
+      width: 90%;
+    }
+    .dishImage{
+      border: 6px ridge rgb(230, 206, 86);
+      width:90%; height:100%
+
+    }
+    .cont:hover{
+      transform: scale(1);
+      box-shadow: none;
+    }
+    }
