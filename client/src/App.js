@@ -10,16 +10,17 @@ import Review from "./components/Review"
 import Sign from "./components/Sign"
 function App() {
   return (
-    <>
- 
-    <Router>
-      <Route path="/" exact component={Dashboard} />
-      <Route path="/categories" component={Categories} />
-      <Route path="/footer" component={Footer} />
-      <Route path="/review" component={Review} />
-      <Route path="/sign" component={Sign} />
-    </Router>
-    </>
+    <div>
+
+      <Router>
+        <Route path="/" exact component={Dashboard} />
+        <Route path="/categories" exact component={Categories} />
+
+        <Route path="/review" component={Review} />
+        <Route path="/sign" component={Sign} />
+      </Router>
+      <Footer />
+    </div>
   );
 }
 

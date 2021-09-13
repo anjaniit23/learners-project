@@ -1,6 +1,8 @@
     .p{
+      margin-top: -5px;
       color: gray;
       font-family: Georgia;
+      font-size: 1rem;
     }
     /* *{
       background-color:RGB(241, 245, 248);
@@ -48,19 +50,20 @@
       color: white;
     }
 
-  
+    .btns{
+      width: 100px;
+      height: 38px;
+    }
     .cont{
       
         width: 90%;
-        height: 230px;
+        height: 220px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 2.5% 0%;
         /* background-image: linear-gradient(rgb(245, 233, 233),white); */
-        background-color:RGB(241, 245, 248);
-    
-        border-style: inherit;
+        background-image: linear-gradient(rgba(255, 255, 255, 0),rgba(226, 229, 229, 0.836));
  
     }
 
@@ -82,7 +85,7 @@
         justify-content: center;
         padding-bottom: 2.7%;
         background-color:RGB(241, 245, 248);
-        padding: 2% 9%;
+        padding: 2% 9% 5% 9%;
     
     }
     .nameAndPrice{
@@ -98,7 +101,7 @@
     .dishImage{
       border: 3px solid rgba(128, 128, 128, 0.199);
       border-style:outset;
-      width:80%; height:100%;
+      width:185px; height:190px;
 
     }
     .styleInfo{
