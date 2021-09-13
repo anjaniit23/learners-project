@@ -2,10 +2,9 @@
       color: gray;
       font-family: Georgia;
     }
-    html{
+    /* *{
       background-color:RGB(241, 245, 248);
-    
-    }
+    } */
 
     ul{
       list-style: none;
@@ -47,8 +46,6 @@
       transition: 0.4s ease-in;
       background-color: rgb(139, 115, 79);
       color: white;
-    
-    
     }
 
   

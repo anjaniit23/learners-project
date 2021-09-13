@@ -1,0 +1,85 @@
+
+*{
+  
+  padding: 0;
+  margin: 0;
+ box-sizing: border-box;
+}
+ body{
+  background-color: rgb(255, 255, 255);
+  /*font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;*/
+} 
+
+
+.logsign{
+  text-decoration: none;
+}
+
+.login h3{
+  border-bottom: 2px solid rgba(9, 177, 65, 0.842);
+  padding-bottom: 4px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: xx-large;
+}
+.btn-radius{
+  border: 2px solid rgba(9, 177, 65, 0.842);
+  border-radius: 25px;
+  background-color: transparent;
+  padding: 4px 20px;
+  font-size: large;
+  color: rgba(9, 177, 65, 0.842);
+  font-weight: bold;
+  transition-property: all;
+  transition-delay: 50ms;
+  transition-duration: 400ms;
+
+}
+.loginpage a{
+font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  color: #111;
+}
+.loginpage a:hover{
+  text-decoration: underline;
+  color: blue;
+}
+.btn-radius:hover{
+  background-color: rgba(9, 177, 65, 0.842);
+  color: #fff;
+}
+.login{
+  color: rgba(9, 177, 65, 0.842);
+}
+.open a{
+   cursor: pointer;
+   padding-bottom: 2px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+   border-bottom: 2px solid rgba(9, 177, 65, 0.842);
+}
+
+
+
+.card {
+  border: 0px solid black;
+  /* max-width:fit-content ; */
+  border-radius: 20px;
+  background-color: #fff; 
+  /* transition: transform .25s ; */
+  text-align: center;
+  margin: 20px auto;
+  box-shadow: 4px 4px 10px 1px rgb(102, 101, 101)  ;
+  position: relative;
+  top:50px;
+}
+.edit:hover{
+  color: rgba(0, 0, 255, 0.788);
+  cursor:  pointer;
+}
+.forgot a{
+  text-decoration: none;
+  color: #111;
+}
