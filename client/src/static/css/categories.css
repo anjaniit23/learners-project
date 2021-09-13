@@ -61,7 +61,8 @@
         align-items: center;
         margin: 2.5% 0%;
         /* background-image: linear-gradient(rgb(245, 233, 233),white); */
-        background-color:rgb(233, 235, 236);
+        background-color:RGB(241, 245, 248);
+    
         border-style: inherit;
  
     }
