@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import "../static/css/categories.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import veg from "../static/img/categories/veg.png";
 import nonveg from "../static/img/categories/non-veg.png";
-import { Button } from 'react-bootstrap';
+import { Button } from 'reactstrap';
 import React, { useEffect, useState } from "react";
 
 
@@ -519,18 +520,18 @@ const BodyCategory = () => {
                     </div>
                 </div>
             </div>
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon "></span>
                     </button>
                     <div class="collapse navbar-collapse pt-3" id="navbarNav">
                         <ul class="menulist navbar-nav">
-                            <li className="nav-item ms-n3 first hey" onClick={() => { setCurrentCategory(<All />) }}>All</li>
-                            <li className="nav-item ms-3" onClick={() => { setCurrentCategory(<Dairy />) }}>Diary</li>
-                            <li className="nav-item ms-3" onClick={() => { setCurrentCategory(<Seafood />) }}>Seafood</li>
-                            <li className="nav-item ms-3" onClick={() => { setCurrentCategory(<Poultry />) }}>Poultry</li>
-                            <li className="nav-item ms-3" onClick={() => { setCurrentCategory(<Grains />) }}>Grains</li>
+                            <li className="nav-item li ms-n3 first " onClick={() => { setCurrentCategory(<All />) }}>All</li>
+                            <li className="nav-item li ms-3" onClick={() => { setCurrentCategory(<Dairy />) }}>Diary</li>
+                            <li className="nav-item li ms-3" onClick={() => { setCurrentCategory(<Seafood />) }}>Seafood</li>
+                            <li className="nav-item li ms-3" onClick={() => { setCurrentCategory(<Poultry />) }}>Poultry</li>
+                            <li className="nav-item li ms-3" onClick={() => { setCurrentCategory(<Grains />) }}>Grains</li>
 
                         </ul>
                     </div>
