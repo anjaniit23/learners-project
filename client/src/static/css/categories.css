@@ -2,9 +2,9 @@
       color: gray;
       font-family: Georgia;
     }
-    html{
+    /* *{
       background-color:RGB(241, 245, 248);
-    }
+    } */
 
     ul{
       list-style: none;
