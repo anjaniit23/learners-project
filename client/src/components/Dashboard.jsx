@@ -7,7 +7,7 @@ import About from "./About";
 function Dashboard(){
     return(
         <div>
-        <Navbar />
+      
         <Carousel />
         <About />
         </div>

@@ -1,18 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Navbar from "../src/components/Navbar";
-
+import { BrowserRouter as Router, NavLink, Route, Switch } from "react-router-dom";
 //import components
 import Dashboard from "./components/Dashboard.jsx";
 import Categories from "./components/Categories";
 import Footer from "./components/Footer"
 import Review from "./components/Review"
 import Sign from "./components/Sign"
+import Nav from "./components/Nav";
 function App() {
   return (
     <div>
 
-      <Router>
+      <Router><Nav />
         <Route path="/" exact component={Dashboard} />
         <Route path="/categories" exact component={Categories} />
         <Route path="/review" component={Review} />
