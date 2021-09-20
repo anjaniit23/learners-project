@@ -6,7 +6,6 @@ import Categories from "./components/Categories";
 import Footer from "./components/Footer";
 import Review from "./components/Review";
 import Sign from "./components/Sign";
-import Nav from "./components/Nav";
 import specialities from "./components/Specialities";
 function App() {
   return (
