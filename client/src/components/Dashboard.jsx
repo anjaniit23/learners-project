@@ -1,18 +1,18 @@
 import React from "react";
 
-import Navbar from "./Navbar";
+import Nav from "./Nav";
 import Carousel from "./Caraousel";
 import About from "./About";
 
-function Dashboard(){
-    return(
+function Dashboard() {
+    return (
         <div>
-      
-        <Carousel />
-        <About />
+            <Nav />
+            <Carousel />
+            <About />
         </div>
-        
+
     );
 }
 
-export default Dashboard ;
+export default Dashboard;

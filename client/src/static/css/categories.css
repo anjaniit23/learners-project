@@ -17,6 +17,7 @@
       color: rgb(0, 0, 0);
       font-size: 2rem;
       font-weight: 500;
+      float: left;
     }
     .homeback{
       font-size: 1.5rem;
@@ -56,14 +57,11 @@
       background-color: rgb(139, 115, 79);
       color: white;
     }
-<<<<<<< HEAD
 
     .btns{
       width: 100px;
       height: 38px;
     }
-=======
->>>>>>> 7e81c8c5610014f06dba67934c74200d1a174b68
     .cont{
       
         width: 90%;
@@ -150,5 +148,7 @@
       transform: scale(1);
       box-shadow: none;
     }
-    
+    .homeback{
+     float: right;
+    }
     }

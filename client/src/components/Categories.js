@@ -509,8 +509,10 @@ const BodyCategory = () => {
         <div>
             <div>
                 <div className="row pt-3 px-3 navbar navbar-light bg-light ">
-                    <div className="col-lg-1 col-sm-4 ps-lg-5 ps-sm-5">
-                        <span className="menu">Menu</span><span><Link className="homeback" to="/" >Home</Link></span>
+                    <div className="col-lg-2 col-sm-4 ps-lg-5 ps-sm-5 mb-3">
+
+                        <Link className="homeback" to="/" ><img src={"https://graphicsfamily.com/wp-content/uploads/2020/10/Restaurant-logo-design-free-template-scaled.jpg"} alt="logo" height="45px" width="40px" style={{ borderRadius: "100%" }} /></Link>
+                        <span className="menu">Menu</span>
                     </div>
 
                     <div className="col-lg-4 col-sm-8 pe-lg-5">
