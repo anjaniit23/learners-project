@@ -15,7 +15,6 @@ function App() {
       <Router>
         <Route path="/" exact component={Dashboard} />
         <Route path="/categories" exact component={Categories} />
-
         <Route path="/review" component={Review} />
         <Route path="/sign" component={Sign} />
       </Router>

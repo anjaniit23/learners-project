@@ -15,8 +15,15 @@
     }
     .menu{
       color: rgb(0, 0, 0);
+      font-size: 2rem;
+      font-weight: 500;
     }
-  
+    .homeback{
+      font-size: 1.5rem;
+      color: gray;
+      padding-left: 1rem;
+      text-decoration: none;
+    }
     .menulist{
     
       line-height:1;

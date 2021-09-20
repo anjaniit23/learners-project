@@ -1,16 +1,16 @@
-import React , {useState , useEffect}from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Dashboard = () =>{
+const Dashboard = () => {
     const [data, setData] = useState("");
-    useEffect(() =>{
+    useEffect(() => {
         axios.get('http://localhost:5000/api')
-        .then(res =>{
-            setData(res.data.text);
-        })
+            .then(res => {
+                setData(res.data.text);
+            })
     });
 
-    return(
+    return (
         <div> {data}</div>
     )
 }

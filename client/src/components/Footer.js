@@ -7,12 +7,9 @@ import "../static/css/footer.css";
 const Footer = () => {
     return (
         <div>
-            <div class="container">
-
-            </div>
 
             <div class="container">
-                <footer class="py-3">
+                <footer class="py-2">
                     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                         <li class="nav-item"><a href=" " class="nav-link px-2 text-muted">Home</a></li>
                         <li class="nav-item"><a href=" " class="nav-link px-2 text-muted">Policy</a></li>
@@ -22,7 +19,7 @@ const Footer = () => {
                     </ul>
                     <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
                 </footer>
-                <footer class="py-3">
+                <footer class="pt-0">
 
                     <div class="row d-flex justify-content-between">
                         <div class="col-4 ms-2">

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import "../static/css/categories.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Link } from "react-router-dom";
 import veg from "../static/img/categories/veg.png";
 import nonveg from "../static/img/categories/non-veg.png";
 import { Button } from 'reactstrap';
@@ -509,9 +509,10 @@ const BodyCategory = () => {
         <div>
             <div>
                 <div className="row pt-3 px-3 navbar navbar-light bg-light ">
-                    <div className="col-lg-8 col-sm-4 ps-lg-5 ps-sm-5">
-                        <span className="menu"><h2>Menu</h2></span>
+                    <div className="col-lg-1 col-sm-4 ps-lg-5 ps-sm-5">
+                        <span className="menu">Menu</span><span><Link className="homeback" to="/" >Home</Link></span>
                     </div>
+
                     <div className="col-lg-4 col-sm-8 pe-lg-5">
                         <form class="d-flex">
                             <button class="btn btn-outline-success" type="submit">Search</button>
