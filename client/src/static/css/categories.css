@@ -25,7 +25,7 @@
       justify-content: center;
      
     }
-    li{
+    .li{
       width: 80px;
       float: left;
       height: 40px;
@@ -40,15 +40,13 @@
     }
  
 
-    li:hover{
+    .li:hover{
 
       cursor: pointer;
       transition: 0.4s ease-in;
       background-color: rgb(139, 115, 79);
       color: white;
     }
-
-  
     .cont{
       
         width: 90%;
@@ -106,11 +104,16 @@
     .cont{
       height: 500px;
     }
-    li{
+    .li{
       text-align: left;
       display: flex;
       justify-content: left;
       align-items: center;
+    }
+    .li:hover{
+      color: rgb(10, 9, 9);
+      background-color:rgba(255, 255, 255, 0);
+    
     }
     .first{
       margin-left: 17px;

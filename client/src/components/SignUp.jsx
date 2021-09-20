@@ -29,7 +29,7 @@ const Signup = (props) => {
                         <div className="col-2">OR</div>
                         <div className="col-4"><hr /></div>
                     </div>
-                    <form className="row pe-3 ">
+                    <form className="row pe-3 signup-form">
 
                         <div className="col-md-12">
                             <label for="inputName4" className="form-label" />

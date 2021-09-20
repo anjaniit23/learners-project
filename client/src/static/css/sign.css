@@ -83,3 +83,18 @@ font-weight: bold;
   text-decoration: none;
   color: #111;
 }
+.width{
+  width: 44rem;
+}
+@media screen and (max-width:576px) {
+.form-control{
+  width: 70%;
+  margin: auto;
+}
+.imgs> img{
+  display: none;
+}
+.width{
+  width: fit-content;
+}
+}
