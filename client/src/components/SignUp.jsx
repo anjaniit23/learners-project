@@ -29,7 +29,7 @@ const Signup = (props) => {
                     <div className="col-2">OR</div>
                     <div className="col-4"><hr /></div>
                 </div>
-                <form className="row pe-3 signup-form">
+                <form className="row pe-3 signup-form" method="POST" action="http://localhost:5000/api/users/register">
 
                     <div className="col-md-12">
                         <label for="inputName4" className="form-label" />
@@ -43,17 +43,21 @@ const Signup = (props) => {
                         <label for="inputPassword4" className="form-label" />
                         <input type="password" className="form-control bg-light  in" id="inputPassword4" required placeholder="Password" />
                     </div>
+                    <div className="col-md-12">
+                        <label for="inputconfirmPassword4" className="form-label" />
+                        <input type="password" className="form-control bg-light  in" id="inputPassword4" required placeholder="confirmPassword" />
+                    </div>
 
 
-                    <p className="pt-1 loginpage ">By Signing up you agree to our <a href="#">Terms and Condition</a></p>
+                    <p className="pt-1 loginpage ">By Signing up you agree to our <a href=" ">Terms and Condition</a></p>
                     <div className="col-12 pt-1">
                         <button type="submit" className="btn-radius">Sign Up</button>
                     </div>
                     <div className="col-12   pb-1 justify-content-center loginpage">
                         <hr />
-                        <a onClick={() => {
+                        <span onClick={() => {
                             props.setuser(false);
-                        }}>Already have an account ? </a>
+                        }}>Already have an account ? </span>
                     </div>
                 </form>
             </div>

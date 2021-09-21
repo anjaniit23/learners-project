@@ -5,7 +5,7 @@ const validateLogIn = require("../validation/login");
 const bcrypt = require("bcrypt");
 const isEmpty = require("../validation/isEmpty");
 const User = require("../models/userModel");
-const uri = require('../server/uri');
+const uri = require('../server/keys');
 const jwt = require("jsonwebtoken");
 
 router.get('/', (req, res) => {

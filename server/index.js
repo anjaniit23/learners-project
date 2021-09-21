@@ -4,20 +4,24 @@ const router = express.Router();
 const http = require('http');
 const cors = require('cors');
 const mongoose = require("mongoose");
-const uri = require("./uri");
+const keys = require("./keys");
 const users = require("../routes/users");
 const addToCart = require("../routes/addToCart");
 const passport = require("passport");
+const reviews = require("../routes/reviews");
 //use
 const app = express();
+//used for parsing incoming req into json objects
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+//using routes
 app.use("/api/users", users);
 app.use("/api/addToCart", addToCart);
+app.use("/api/reviews", reviews)
 const server = http.createServer(app);
 //connecting mongodb
 
-mongoose.connect(uri.uri).then(() => { console.log("connected mongodb"); }).catch(err => { console.log(err); });
+mongoose.connect(keys.uri).then(() => { console.log("connected mongodb"); }).catch(err => { console.log(err); });
 //initialising and configuring passport
 app.use(passport.initialize());
 require("./passport")(passport);
