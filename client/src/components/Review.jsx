@@ -12,9 +12,14 @@ import axios from "axios";
 
 export default function Feedback() {
   const [review, setReview] = useState({ text: "" });
+  const [allReviews, setAllReviews] = useState();
   const change = (e) => {
     setReview({ ...review, [e.target.name]: e.target.value });
     console.log(review);
+  }
+  const getAllReviews = () => {
+    console.log("inside get all");
+    axios.get("http://localhost:5000/api/reviews/").then(reviews => { setAllReviews(reviews) }).catch(err => console.log(err));
   }
   const postReview = (e) => {
     e.preventDefault();
@@ -24,6 +29,8 @@ export default function Feedback() {
   return (
     <div>
       <Nav />
+      {getAllReviews()}
+      {allReviews}
       <div className="feedback-container ">
         <div className="feedback-card mt-4">
           <div className="feedback-header">

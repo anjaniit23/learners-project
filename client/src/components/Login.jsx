@@ -4,6 +4,7 @@ import "../static/css/sign.css";
 // import e from "cors";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+export let tokenCollector = null;
 const Signin = (props) => {
     const history = useHistory();
     const [userinfo, setUserinfo] = useState({ email: "", password: "" });
@@ -15,7 +16,7 @@ const Signin = (props) => {
     const postInfo = async (e) => {
         e.preventDefault();
         axios.post("http://localhost:5000/api/users/login", userinfo)
-            .then(() => { history.push("/categories"); })
+            .then((token) => { console.log(token); tokenCollector = token; history.push("/categories"); })
             .catch((err) => { setErrorsSignin(err.response.data) });
     }
 
