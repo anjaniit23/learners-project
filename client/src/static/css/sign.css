@@ -11,7 +11,12 @@
   font-family: 'Roboto', sans-serif;*/
 } 
 
-
+.errors{
+  width: 100%;
+  color: red;
+  height: 30px;
+  margin-bottom: -20px;
+}
 .logsign{
   text-decoration: none;
 }

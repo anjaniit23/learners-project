@@ -5,9 +5,22 @@ import Happy from "../static/img/review/happy.svg";
 import "../static/css/review.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from "./Nav";
+import { useState } from "react";
+// import e from "express";
+import axios from "axios";
 
 
 export default function Feedback() {
+  const [review, setReview] = useState({ text: "" });
+  const change = (e) => {
+    setReview({ ...review, [e.target.name]: e.target.value });
+    console.log(review);
+  }
+  const postReview = (e) => {
+    e.preventDefault();
+    axios.post("http://localhost:5000/api/reviews/addreview", review).then(() => { console.log("review submitted") })
+      .catch((err) => { console.log(err) });
+  }
   return (
     <div>
       <Nav />
@@ -38,21 +51,24 @@ export default function Feedback() {
                   <img src={Happy} alt="Happy" className="Happy" />
                 </label>
               </div>
+
               <div className="feedback-textarea-container">
                 <textarea
                   className="feedback-textarea"
                   id="suggested-improvements"
+                  value={review.text}
+                  name="text"
+                  onChange={(e) => change(e)}
                   placeholder="(Optional) Suggest improvements..."
                   rows="5"
                   spellcheck="false"
                 ></textarea>
               </div>
               <hr className="feedback-hr" />
+              <input type="submit" className="btn btn-outline-primary" onClick={postReview} value="Submit" />
             </div>
 
-            <button type="submit" className="send-button">
-              <span className="text">Submit</span>
-            </button>
+
           </div>
         </div>
       </div>

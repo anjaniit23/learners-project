@@ -1,8 +1,34 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from "axios";
 import "../static/css/sign.css";
+import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 const Signup = (props) => {
+    const history = useHistory();
+    const [userDetails, setUserDetails] = useState({ name: "", email: "", password: "", confirmPassword: "" });
+    const [errorsSignup, setErrorsSignup] = useState({});
+    const changehandler = (e) => {
+        console.log(e.target.name, e.target.value);
+
+        setUserDetails({ ...userDetails, [e.target.name]: e.target.value });
+        console.log("user", userDetails);
+    }
+    const registration = (e) => {
+        e.preventDefault();
+        axios.post("http://localhost:5000/api/users/register", userDetails).then((user) => {
+            console.log("axios", user);
+            history.push("/");
+        }).catch(err => {
+            setErrorsSignup(err.response.data);
+            // console.log("status is ", err.response.status);
+            // console.log("headers is ", err.response.headers);
+            // console.log("request is ", err.response.request);
+            // console.log("config is ", err.response.config);
+        });
+
+    }
     return (
 
         <div className="row justify-content-center align-content-center">
@@ -29,27 +55,31 @@ const Signup = (props) => {
                     <div className="col-2">OR</div>
                     <div className="col-4"><hr /></div>
                 </div>
-                <form className="row pe-3 signup-form" method="POST" action="http://localhost:5000/api/users/register">
+                <form className="row pe-3 signup-form" onSubmit={registration}>
 
-                    <div className="col-md-12">
+                    <div className="col-md-12 mt-n4">
                         <label for="inputName4" className="form-label" />
-                        <input type="text" className="form-control bg-light  in" placeholder="Name" required aria-label="First name" />
+                        <input type="text" value={userDetails.name} name="name" onChange={(e) => changehandler(e)} className="form-control bg-light  in" placeholder="Name" />
+                        <div className="errors">{errorsSignup.name}</div>
                     </div>
                     <div className="col-md-12">
                         <label for="inputEmail4" className="form-label" />
-                        <input type="email" className="form-control bg-light  in" id="inputEmail4" required placeholder="E-Mail" />
+                        <input type="email" value={userDetails.email} name="email" onChange={(e) => changehandler(e)} className="form-control bg-light  in" id="inputEmail4" placeholder="E-Mail" />
+                        <div className="errors">{errorsSignup.email}</div>
                     </div>
                     <div className="col-md-12">
                         <label for="inputPassword4" className="form-label" />
-                        <input type="password" className="form-control bg-light  in" id="inputPassword4" required placeholder="Password" />
+                        <input type="password" value={userDetails.password} name="password" onChange={(e) => changehandler(e)} className="form-control bg-light  in" id="inputPassword4" placeholder="Password" />
+                        <div className="errors">{errorsSignup.password}</div>
                     </div>
                     <div className="col-md-12">
                         <label for="inputconfirmPassword4" className="form-label" />
-                        <input type="password" className="form-control bg-light  in" id="inputPassword4" required placeholder="confirmPassword" />
+                        <input type="password" value={userDetails.confirmPassword} name="confirmPassword" onChange={(e) => changehandler(e)} className="form-control bg-light  in" id="inputPassword4" placeholder="confirmPassword" />
+                        <div className="errors">{errorsSignup.confirmPassword}</div>
                     </div>
 
 
-                    <p className="pt-1 loginpage ">By Signing up you agree to our <a href=" ">Terms and Condition</a></p>
+                    <p className="pt-1 loginpage pt-5">By Signing up you agree to our <a href=" ">Terms and Condition</a></p>
                     <div className="col-12 pt-1">
                         <button type="submit" className="btn-radius">Sign Up</button>
                     </div>

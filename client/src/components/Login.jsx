@@ -1,8 +1,24 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../static/css/sign.css";
+// import e from "cors";
+import { useHistory } from "react-router-dom";
+import axios from "axios";
 const Signin = (props) => {
-  
+    const history = useHistory();
+    const [userinfo, setUserinfo] = useState({ email: "", password: "" });
+    const [errorsSignin, setErrorsSignin] = useState({});
+    const change = (e) => {
+        setUserinfo({ ...userinfo, [e.target.name]: e.target.value });
+        console.log(userinfo);
+    }
+    const postInfo = async (e) => {
+        e.preventDefault();
+        axios.post("http://localhost:5000/api/users/login", userinfo)
+            .then(() => { history.push("/categories"); })
+            .catch((err) => { setErrorsSignin(err.response.data) });
+    }
+
     return (
         <>
             <div className="row justify-content-center align-content-center">
@@ -25,32 +41,34 @@ const Signin = (props) => {
                         </div>
                     </div>
                     <div className="row  justify-content-center pt-3 pb-2">
-                    <div className="col-4"><hr /></div>
-                    <div className="col-2">OR</div>
-                    <div className="col-4"><hr /></div>
+                        <div className="col-4"><hr /></div>
+                        <div className="col-2">OR</div>
+                        <div className="col-4"><hr /></div>
                     </div>
-                    <form className="row pe-3 align-items-center">
+                    <form className="row pe-3 align-items-center" onSubmit={postInfo}>
 
                         <div className="col-md-12 ">
                             <label for="Email4" className="form-label" />
-                            <input type="email" className="form-control bg-light  in" id="Email4" required placeholder="E-Mail" />
+                            <input name="email" value={userinfo.email} onChange={change} type="email" className="form-control bg-light  in" id="Email4" placeholder="E-Mail" />
+                            <div className="errors">{errorsSignin.email}</div>
                         </div>
                         <div className="col-md-12 ">
                             <label for="Password4" className="form-label" />
-                            <input type="password" className="form-control bg-light  in" id="Password4" required  placeholder="Password" />
+                            <input name="password" value={userinfo.password} onChange={change} type="password" className="form-control bg-light  in" id="Password4" placeholder="Password" />
+                            <div className="errors">{errorsSignin.password}</div>
                         </div>
-                        <div className="col-12 pt-3 pb-2  ">
+                        <div className="col-12 pt-5 pb-2  ">
                             <button type="submit" className=" btn-radius">Login</button>
                         </div>
                         <div className="col-12 pt-3 justify-content-center forgot">
-                            <a href=""> Forgotten your Password?</a>
+                            <a href=" "> Forgotten your Password?</a>
                         </div>
-                        
+
                         <div className="col-12   pt-2 justify-content-center loginpage">
-                        <hr />
-                          <p> Don't have an account? <a onClick={()=>{
-                              props.setuser(true);
-                          }}> Sign Up</a>  </p>
+                            <hr />
+                            <p> Don't have an account? <span onClick={() => {
+                                props.setuser(true);
+                            }}> Sign Up</span>  </p>
                         </div>
                     </form>
                 </div>

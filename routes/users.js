@@ -8,12 +8,13 @@ const User = require("../models/userModel");
 const uri = require('../server/keys');
 const jwt = require("jsonwebtoken");
 
+
 router.get('/', (req, res) => {
     res.send({ text: "In User route" });
 });
 router.post('/register', (req, res) => {
 
-    console.log(req.body);
+
     let errors = validateRegisteration(req.body);
     if (!isEmpty(errors)) {
         return res.status(400).json(errors);
@@ -23,7 +24,7 @@ router.post('/register', (req, res) => {
             if (user) {
                 errors.usererr = "User already exists";
                 console.log("user exists");
-                return res.status(400).json(errors);
+                return res.status(400).send(errors);
             } else {
                 const newUser = new User({
                     name: req.body.name,
